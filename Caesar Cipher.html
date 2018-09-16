@@ -7,18 +7,18 @@
 		<script src="Caesar.js"></script>
 	</head>
 	<body>
-		<form>
+		<form name=>
 			<p>
 				Enter your code<br>
-				<input type="text" name="code" required><br>
+				<input type="text" name="codeString" id="codeString" required><br>
 			</p>
 			<p>
 				Enter how many letters to shift<br>
 				(enter negative to shift backwards)<br>
-				<input type="text" name="shift" required><br>
+				<input type="text" name ="codeShift" id="codeShift" required><br>
 			</p>
 			<p>
-				<input type="submit" name="submit">
+				<button type="button" name="submit" onclick="getData()">Submit</button>
 			</p>
 		</form>
 	</body>
