@@ -40,6 +40,12 @@ function setCharAt(str,index,chr) {
 }
 
 function getNewLetter(previous, shift){
+    if(shift<-26){
+        shift = shift % -26
+    }
+    if(shift>= -26 && shift<0){
+        shift = 26 + shift;
+    }
     newPosition = (previous + shift) % 26
     newLetter = alphabet[newPosition]
 }
