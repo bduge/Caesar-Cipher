@@ -5,9 +5,21 @@
 		<meta charset="utf-8" />
 		<title>Caesar cipher generator</title>
 		<script src="Caesar.js"></script>
+		<link rel="stylesheet" href="caesar.css">
 	</head>
 	<body>
-		<form name=>
+		<h1>
+			Bill's Caesar Cipher Generator
+		</h1>
+		<h3>
+			A caesar cipher is one of the oldest and simplest encryption technique
+			that still remains fun to play with. It moves every letter in a given "secret message" down or up
+			the alphabet by a given "shift amount". For example, the if the code was the message "abc" and the shift
+			was 3, each letter in "abc" would be shifted down the alphabet 3 places to return the cipher "def". Make 
+			your own cipher below!
+		</h3>
+		<p></p>
+		<form>
 			<p>
 				Enter your code<br>
 				<input type="text" name="codeString" id="codeString" required><br>
@@ -21,5 +33,14 @@
 				<button type="button" name="submit" onclick="main()">Submit</button>
 			</p>
 		</form>
+		<div>
+			<p>
+				Your cipher:
+			</p>
+			<p id=display>
+					
+			</p>
+		</div>
+		
 	</body>
 </html>

@@ -62,5 +62,5 @@ function generateCipher(){
 }
 
 function printCipher(){
-    console.log(cipherString)
+    document.getElementById("display").innerHTML = cipherString
 }
