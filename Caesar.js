@@ -9,6 +9,7 @@ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 function main(){
     getData();
     generateCipher();
+    printCipher();
 }
 
 function getData(){
@@ -39,7 +40,8 @@ function setCharAt(str,index,chr) {
 }
 
 function getNewLetter(previous, shift){
-    newLetter = alphabet[previous + shift]
+    newPosition = (previous + shift) % 26
+    newLetter = alphabet[newPosition]
 }
 
 function generateCipher(){
@@ -48,12 +50,11 @@ function generateCipher(){
             if(codeString.charAt(i)==alphabet[j]){
                 getNewLetter(j, codeShift)
                 cipherString=setCharAt(cipherString, i, newLetter)
-                
-                
             }
         }
     }
+}
 
+function printCipher(){
     console.log(cipherString)
-
 }
